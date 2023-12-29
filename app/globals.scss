@@ -1,0 +1,50 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --foreground-rgb: 0, 0, 0;
+  --background-start-rgb: 214, 219, 220;
+  --background-end-rgb: 255, 255, 255;
+}
+
+body {
+  color: rgb(var(--foreground-rgb));
+  background: linear-gradient(
+      to bottom,
+      transparent,
+      rgb(var(--background-end-rgb))
+    )
+    rgb(var(--background-start-rgb));
+}
+
+.btn-base {
+  @apply w-[77px] h-[77px] rounded-[23px] flex justify-center items-center;
+  &.default {
+    box-shadow: 3px 3px 7px rgba(0, 0, 0, 0.15), inset 4px 4px 4px #383e4e;
+    background: #252b38;
+  }
+  &.grey {
+    background: #545f71;
+    box-shadow: 3px 3px 7px rgba(0, 0, 0, 0.15), inset 4px 4px 4px #636c7d;
+  }
+  &.orange {
+    background: #d9781f;
+    box-shadow: 3px 3px 7px rgba(0, 0, 0, 0.15), inset 4px 4px 4px #dc862d;
+  }
+  div {
+    width: 66.13px;
+    height: 66.13px;
+    border-radius: 18px;
+    @apply flex justify-center items-center text-white/80 text-2xl;
+    &.default {
+      background: linear-gradient(134.24deg, #2a303e 15.47%, #393e51 94.71%);
+    }
+    &.grey {
+      background: linear-gradient(134.24deg, #465262 15.47%, #626b7c 94.71%);
+    }
+    &.orange {
+      background: linear-gradient(134.24deg, #dd732f 15.47%, #e28d21 94.71%);
+    }
+  }
+}
